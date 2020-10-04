@@ -46,8 +46,5 @@ def tweet():
         with open(reply_log, mode='w') as f:
             pass
 
-def main():
-    schedule.run_pending()
-
 if __name__ == '__main__':
     tweet()
