@@ -1,0 +1,33 @@
+2020-10-04 19:00:33,050    ERROR Twitter API returned a 403 (Forbidden), Status is a duplicate.
+2020-10-04 19:16:46,906    ERROR Twitter API returned a 403 (Forbidden), Status is a duplicate.
+2020-10-04 19:16:50,081    ERROR Twitter API returned a 403 (Forbidden), Status is a duplicate.
+2020-10-04 19:17:42,306     INFO 定期投稿完了: 
+test
+2020-10-04 19:19:24,207     INFO 返信しました: 
+@Laughingcat0
+フーリエ変換の結果です。
+添付画像: ./results/figure.png
+2020-10-04 19:21:07,925     INFO 返信しました: 
+@Laughingcat0
+フーリエ変換の結果です。
+添付画像: ./results/figure.png
+2020-10-04 19:29:53,859     INFO 定期投稿完了: 
+【定期投稿】2020-10-04 19:29:53.576915
+dFFT_botです
+このアカウントに画像をつけてリプライすると
+フーリエ変換した後の画像を返信します
+文章に「ハイ」を入れるとハイパスフィルタ
+「ローパス」を入れるとローパスフィルタ
+それ以外は普通にフーリエ変換した画像を返信します
+2020-10-04 19:30:30,725     INFO 定期投稿完了: 
+【定期投稿】2020年10月04日 19:30
+ FFT_botです
+このアカウントに画像をつけてリプライすると
+フーリエ変換した後の画像を返信します
+文章に「ハイ」を入れるとハイパスフィルタ
+「ローパス」を入れるとローパスフィルタ
+それ以外は普通にフーリエ変換した画像を返信します
+2020-10-04 19:37:55,358     INFO 返信しました: 
+@Laughingcat0
+フーリエ変換の結果です。
+添付画像: ./results/figure.png
