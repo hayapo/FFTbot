@@ -1,6 +1,5 @@
 from logging import Handler, getLogger, StreamHandler, FileHandler, DEBUG, Formatter
 from time import sleep
-import schedule
 from requests_oauthlib import OAuth1Session
 import sys
 import logging
@@ -15,9 +14,9 @@ twitter = Twython(
     ACCESS_TOKEN_SECRET
 )
 
-logfile = "./schedule_tweet_log.txt"
-save_file_name = "schedule_tweet_id.txt"
-reply_log = "reply_log.txt"
+logfile = "./records/schedule_tweet_log.txt"
+save_file_name = "./records/schedule_tweet_id.txt"
+reply_log = "./records/reply_log.txt"
 
 logger = getLogger(__name__)
 handler1 = StreamHandler()
@@ -31,6 +30,10 @@ logger.addHandler(handler2)
 logger.propagate = False
 
 def tweet():
+    '''
+    10:00と19:30に定期投稿する
+    reply_bot.pyで呼び出される
+    '''
     dt_now = datetime.datetime.now()
     dt_now = dt_now.strftime('%Y年%m月%d日 %H:%M')
     text = "【定期投稿】\n{0}\n FFT_botです\nこのアカウントに画像をつけてリプライすると\nフーリエ変換した後の画像を返信します\n文章に「ハイ」を入れるとハイパスフィルタ\n「ロー」を入れるとローパスフィルタ\nそれ以外は普通にフーリエ変換した画像を返信します".format(dt_now)
