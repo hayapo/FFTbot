@@ -3,3 +3,5 @@ libxrender1
 libfontconfig1
 libice6
 libgl1-mesa-dev
+libglib2.0-0
+libxext6
