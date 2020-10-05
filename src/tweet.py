@@ -1,7 +1,7 @@
 from logging import Handler, getLogger, StreamHandler, FileHandler, DEBUG, Formatter
 from time import sleep
 from requests_oauthlib import OAuth1Session
-import sys
+import sys, os
 import logging
 import datetime
 from twython import Twython, TwythonError
