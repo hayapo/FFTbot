@@ -1,4 +1,3 @@
-from credential import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 import os, sys, datetime, re, random
 from time import sleep
 import numpy as np
@@ -8,6 +7,11 @@ from twython import Twython, TwythonError
 from fourier_transform import fft
 from highpass import highpass_fft
 from lowpass import lowpass_fft
+
+CONSUMER_KEY = os.environ['CONSUMER_KEY']
+CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 IMG_DIR = './images/'
 RESULT = './results/figure.png'
