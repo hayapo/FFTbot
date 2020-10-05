@@ -3,13 +3,17 @@ from time import sleep
 from requests_oauthlib import OAuth1Session
 import sys, os
 import logging
-import datetime
+from datetime import datetime, timedelta, timezone
 from twython import Twython, TwythonError
 
-CONSUMER_KEY = os.environ['CONSUMER_KEY']
-CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
-ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
-ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
+CONSUMER_KEY = os.environ["CONSUMER_KEY"]
+CONSUMER_SECRET = os.environ["CONSUMER_SECRET"]
+ACCESS_TOKEN = os.environ["ACCESS_TOKEN"]
+ACCESS_TOKEN_SECRET = os.environ["ACCESS_TOKEN_SECRET"]
+
+# タイムゾーンの生成
+JST = timezone(timedelta(hours=+9), 'JST')
+
 
 twitter = Twython(
     CONSUMER_KEY,
@@ -38,7 +42,8 @@ def tweet():
     10:00と19:30に定期投稿する
     reply_bot.pyで呼び出される
     '''
-    dt_now = datetime.datetime.now()
+
+    dt_now = datetime.now()
     dt_now = dt_now.strftime('%Y年%m月%d日 %H:%M')
     text = "【定期投稿】\n{0}\n FFT_botです\nこのアカウントに画像をつけてリプライすると\nフーリエ変換した後の画像を返信します\n文章に「ハイ」を入れるとハイパスフィルタ\n「ロー」を入れるとローパスフィルタ\nそれ以外は普通にフーリエ変換した画像を返信します".format(dt_now)
     try:
