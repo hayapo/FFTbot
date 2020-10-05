@@ -4,9 +4,9 @@ import numpy as np
 import requests,shutil
 from logging import Handler, getLogger, StreamHandler, FileHandler, DEBUG, Formatter
 from twython import Twython, TwythonError
-from fourier_transform import fft
-from highpass import highpass_fft
-from lowpass import lowpass_fft
+import src.fourier_transform 
+import src.highpass
+import src.lowpass
 
 CONSUMER_KEY = os.environ['CONSUMER_KEY']
 CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
@@ -97,11 +97,11 @@ def main():
                         img_download(source)
                         #変換オプションの判定
                         if 'ハイ' in response['text']:
-                            highpass_fft()
+                            src.highpass.highpass_fft()
                         elif 'ロー' in response['text']:
-                            lowpass_fft()
+                            src.lowpass.lowpass_fft()
                         else:
-                            fft()
+                            src.fourier_transform.fft()
                         #画像をつけて返信する
                         doReply(response,RESULT)
 

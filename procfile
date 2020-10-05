@@ -1,2 +1,2 @@
 web: python index.py
-clock: python src/reply_bot.py
+clock: python reply_bot.py
