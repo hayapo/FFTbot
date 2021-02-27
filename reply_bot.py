@@ -13,8 +13,8 @@ CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
 ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
-IMG_DIR = './images/'
-RESULT = './results/figure.png'
+IMG_DIR = './tmp/'
+RESULT = './tmp/figure.png'
 keyword = 'https://t.co/'
 
 twitter = Twython(
@@ -24,9 +24,9 @@ twitter = Twython(
     ACCESS_TOKEN_SECRET
 )
 
-logfile = "./records/schedule_tweet_log.txt"
-save_file_name = "./records/schedule_tweet_id.txt"
-reply_log = "./records/reply_log.txt"
+logfile = "./tmp/schedule_tweet_log.txt"
+save_file_name = "./tmp/schedule_tweet_id.txt"
+reply_log = "./tmp/reply_log.txt"
 
 logger = getLogger(__name__)
 handler1 = StreamHandler()

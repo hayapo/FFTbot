@@ -5,7 +5,7 @@ from pylab import rcParams
 
 rcParams['figure.figsize'] = 15, 10
 
-IMG_PATH = './images/before.jpg'
+IMG_PATH = './tmp/before.jpg'
 
 def fft():
     #grayscaleで読み込み
@@ -17,7 +17,7 @@ def fft():
     plt.title('Input Image'), plt.xticks([]), plt.yticks([])
     plt.subplot(122),plt.imshow(magnitude_spectrum, cmap = 'gray')
     plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
-    plt.savefig('./results/figure.png')
+    plt.savefig('./tmp/figure.png')
 
 if __name__ == '__main__':
     fft()

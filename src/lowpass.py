@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from pylab import rcParams
 
-IMG_PATH = './images/before.png'
+IMG_PATH = './tmp/before.png'
 
 def lowpass_fft():
     rcParams['figure.figsize'] = 15, 10
@@ -31,7 +31,7 @@ def lowpass_fft():
     plt.title('Input Image'), plt.xticks([]), plt.yticks([])
     plt.subplot(122),plt.imshow(img_back, cmap = 'gray')
     plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
-    plt.savefig('./results/figure.png')
+    plt.savefig('./tmps/figure.png')
 
 if __name__ == '__main__':
     lowpass_fft()

@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from pylab import rcParams
 
-IMG_PATH = './images/before.png'
+IMG_PATH = './tmp/before.png'
 
 def highpass_fft():
     rcParams['figure.figsize'] = 15, 10
@@ -27,7 +27,7 @@ def highpass_fft():
     plt.title('Input Image'), plt.xticks([]), plt.yticks([])
     plt.subplot(122),plt.imshow(img_back)
     plt.title('Result in JET'), plt.xticks([]), plt.yticks([])
-    plt.savefig('./results/figure.png')
+    plt.savefig('./tmp/figure.png')
 
 if __name__ == '__main__':
     highpass_fft()

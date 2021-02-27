@@ -42,8 +42,8 @@ def tweet():
     10:00と19:30に定期投稿する
     reply_bot.pyで呼び出される
     '''
-
-    dt_now = datetime.now()
+    DIFF_JST_FROM_UTC = 9
+    dt_now = datetime.utcnow() + datetime.timedelta(hours=DIFF_JST_FROM_UTC)
     dt_now = dt_now.strftime('%Y年%m月%d日 %H:%M')
     text = "【定期投稿】\n{0}\n FFT_botです\nこのアカウントに画像をつけてリプライすると\nフーリエ変換した後の画像を返信します\n文章に「ハイ」を入れるとハイパスフィルタ\n「ロー」を入れるとローパスフィルタ\nそれ以外は普通にフーリエ変換した画像を返信します".format(dt_now)
     try:
