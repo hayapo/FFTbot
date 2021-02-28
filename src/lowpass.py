@@ -31,7 +31,7 @@ def lowpass_fft():
     plt.title('Input Image'), plt.xticks([]), plt.yticks([])
     plt.subplot(122),plt.imshow(img_back, cmap = 'gray')
     plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
-    plt.savefig('./tmps/figure.png')
+    plt.savefig('./tmp/figure.png')
 
 if __name__ == '__main__':
     lowpass_fft()

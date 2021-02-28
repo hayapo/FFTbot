@@ -1,11 +1,12 @@
-import cv2
+import cv2, boto3, os
 import numpy as np
 from matplotlib import pyplot as plt
 from pylab import rcParams
 
+
 rcParams['figure.figsize'] = 15, 10
 
-IMG_PATH = './tmp/before.jpg'
+IMG_PATH = './tmp/before.png'
 
 def fft():
     #grayscaleで読み込み
@@ -17,7 +18,7 @@ def fft():
     plt.title('Input Image'), plt.xticks([]), plt.yticks([])
     plt.subplot(122),plt.imshow(magnitude_spectrum, cmap = 'gray')
     plt.title('Magnitude Spectrum'), plt.xticks([]), plt.yticks([])
-    plt.savefig('./tmp/figure.png')
+    plt.savefig('./tmp/figure.png')    
 
 if __name__ == '__main__':
     fft()
